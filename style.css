@@ -21,7 +21,7 @@ body {
     background-color: var(--almost-white);
 }
 
-body.escurecer::before {
+body .escurecer::before {
     content: "";
     position: relative;
     height: 100vh;
@@ -31,7 +31,7 @@ body.escurecer::before {
     left: 0;
 }
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,13 +41,14 @@ body.escurecer::before {
     margin-inline:auto;
 }
 
-.header button{
+header button{
     border: none;
     background: none;
     width: fit-content;
+    cursor: pointer;
 }
 
-.header nav.mobile {
+header nav.mobile {
     position: fixed;
     background-color: var(--almost-white);
     right: -16rem;
@@ -65,20 +66,24 @@ body.escurecer::before {
     
 }
 
-.header nav.mobile.abrir {
+header nav.mobile.abrir {
     right: 0;
 }
 
-.header nav button {
-    align-self: flex-end;
-    margin-bottom: 4rem;
+header nav button {
+     margin-left: auto;
+    margin-bottom: 4.5rem;
 }
 
-.header .mobile a {
+header .mobile a {
     text-decoration: none;
     color: var(--dark-blue);
     font-size: 1.125rem;
     line-height: 1.5rem;
+}
+
+header .desktop {
+    display: none;
 }
 
 main{
@@ -115,7 +120,6 @@ main{
     border: none;
     text-transform: uppercase;
     color: var(--almost-white);
-    font-weight: 700;
     font-size: 0.875rem;
     letter-spacing: 0.275rem;
     line-height: 1.5rem;
@@ -180,6 +184,9 @@ main{
     line-height: 1.5rem;
     margin-block: 0.6rem;
 }
+.terceira-secao a {
+    text-decoration: none;
+}
 
 .terceira-secao p {
     font-size: 0.9375rem;
@@ -188,7 +195,30 @@ main{
 }
 
 @media(min-width: 1110px){
-    main {
+   
+
+    header > button {
+        display: none;
+    }
+
+    header .desktop {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desktop a {
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+        color: var(--gunmetal);
+    }
+
+    header .desktop a:hover {
+      color: var(--vermillion);
+    }
+
+
+     main {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1.75rem;
@@ -213,25 +243,22 @@ main{
     .primeira-secao h1{
         font-size: 3.5rem;
     }
+    
+    .primeira-secao button:hover {
+        background-color: var(--dark-blue);
+        cursor: pointer;
+    }
 
     .segunda-secao h2 {
         font-size:2.5rem;
         
     }
-
-    header > buttom {
-        display: none;
-    }
-
-    header .desktop{
+    .terceira-secao {
         display: flex;
-        gap: 2.5rem;
+        grid-column: 1 / 4;
     }
 
-    header .desktop a {
-        font-size: 0.9375rem;
-        line-height: 1.625rem;
-        text-decoration: none;
-        color: var(--gunmetal);
+    .terceira-secao h2:hover {
+        color: var(--vermillion);
     }
 }
