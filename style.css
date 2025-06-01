@@ -217,6 +217,7 @@ main{
       color: var(--vermillion);
     }
 
+
      main {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
