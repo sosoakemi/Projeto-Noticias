@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    --webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
 }
 
 :root {
     --almost-white: #FFFDFA;
     --dark-blue: #00001A;
     --gunmetal: #5E607A;
-    --vermillion: #F15051;
+    --vermillion: #F15D51;
     --yellow: #E9AA52;
     --silver: #C5C6CE;
     
@@ -21,9 +21,9 @@ body {
     background-color: var(--almost-white);
 }
 
-body .escurecer::before {
+body.escurecer::before {
     content: "";
-    position: relative;
+    position: fixed;
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 26, 0.5);
@@ -71,8 +71,8 @@ header nav.mobile.abrir {
 }
 
 header nav button {
-     margin-left: auto;
-    margin-bottom: 4.5rem;
+    align-self: flex-end;
+    margin-bottom: 4rem;
 }
 
 header .mobile a {
@@ -120,6 +120,7 @@ main{
     border: none;
     text-transform: uppercase;
     color: var(--almost-white);
+    font-weight: 700;
     font-size: 0.875rem;
     letter-spacing: 0.275rem;
     line-height: 1.5rem;
@@ -203,7 +204,7 @@ main{
 
     header .desktop {
         display: flex;
-        gap: 1.5rem;
+        gap: 2.5rem;
     }
 
     header .desktop a {
